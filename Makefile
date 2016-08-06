@@ -155,7 +155,7 @@ all: build
 .checkout_lime_pkg:
 	@[ "$(DEV)" == "1" ] && echo "Using developer enviroment" || true
 	git clone $(LIME_GIT) $(BUILD_DIR)/$(LIME_PKG_DIR)
-	cd $(BUILD_DIR)/$(LIME_PKG_DIR) && git checkout $(LIME_GIT_BRANCH) && cd ..
+	cd $(BUILD_DIR)/$(LIME_PKG_DIR) && git pull origin $(LIME_GIT_BRANCH) && git checkout $(LIME_GIT_BRANCH) && cd ..
 	@touch $@
 
 .checkout_owrt:

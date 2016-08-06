@@ -43,11 +43,15 @@ An example of basic usage would be:
 
     make T=ar71xx P=generic J=4
 
+Or, for routers with less of 4 MB of flash memory:
+
+    make T=ar71xx-mini P=basic J=4
+
 Where:
 
 * T indicates the target
 * P indicates the profile
-* J indicates the number of cores to use  
+* J indicates the number of CPU cores to use
 
 Target makes reference to hardware architecture or a specific hardware device. 
 
